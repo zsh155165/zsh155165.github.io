@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content>
+    <link rel="shortcut icon" href="/http：/some.url/to/favicon.ico">
+    <title>函数（下）-稻花香的小窝</title>
+    
+        
+            <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://cdn.bootcss.com/academicons/1.8.6/css/academicons.min.css" rel="stylesheet">
+            <link href="https://cdn.bootcss.com/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+            <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+        
+    
+    <link rel="stylesheet" href="/css/adagio.css">
+</head>
+<body>
+    <div class="container-fluid">
+    <nav class="nav">
+        <div class="collapse navbar-collapse" id="navbar-sm">
+            
+            
+            <div class="navbar-nav">
+                <a href="https://daohx.cn" class="nav-item nav-link">稻花香</a>
+            </div>
+            
+            <div class="navbar-nav">
+                <a href="http://yyadc.cn" class="nav-item nav-link">友链</a>
+            </div>
+            
+        </div>
+    </nav>
+</div>
+
+<div class="d-flex d-md-none" style="width: 100%; background-color: #e9ecef">
+    
+    <div class="nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-sm"
+            aria-expanded="false" aria-label="Toggle Navigation">
+            <i class="fas fa-bars fa-lg"></i>
+        </button>
+    </div>
+    
+    <nav class="navbar ml-auto">
+        <a class="navbar-brand" href="/">
+            
+            <img class="logo" src="https://via.placeholder.com/100x50.png?text=logo" />
+            
+        </a>
+    </nav>
+</div>
+
+
+<div class="container d-none d-md-block my-navbar">
+    <nav class="navbar navbar-expand-sm navbar-light bg-transparent">
+        <a class="navbar-brand " href="/">
+            
+            <img class="logo" src="https://via.placeholder.com/100x50.png?text=logo" />
+            
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                
+                <li class="nav-item pl-2 pr-2 ">
+                    <a class="nav-link" href="https://daohx.cn">稻花香</a>
+                </li>
+                
+                <li class="nav-item pl-2 pr-2 ">
+                    <a class="nav-link" href="http://yyadc.cn">友链</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </nav>
+</div>
+
+
+
+
+    <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        
+        <h1 class="mt-4 article-title page-title">函数（下）</h1>
+        
+        <p class="lead text-gray mt-3">By Anonymous; Published on 2019-09-21</p>
+        
+        <div class="tags">
+            <ul class="tag-list">
+                
+            </ul>
+        </div>
+        
+    </div>
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 pt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <main>
+                            <article class="article-text page-content"><h1 id="函数（下）"><a href="#函数（下）" class="headerlink" title="函数（下）"></a>函数（下）</h1><h2 id="作用域（重点）"><a href="#作用域（重点）" class="headerlink" title="作用域（重点）"></a>作用域（重点）</h2><ul>
+<li>什么是作用域，就是一个变量可以生效的范围</li>
+<li>变量不是在所有地方都可以使用的，而这个变量的使用范围就是作用域</li>
+</ul>
+<h3 id="全局作用域"><a href="#全局作用域" class="headerlink" title="全局作用域"></a>全局作用域</h3><ul>
+<li><p>全局作用域是最大的作用域</p>
+</li>
+<li><p>在全局作用域中定义的变量可以在任何地方使用</p>
+</li>
+<li><p>页面打开的时候，浏览器会自动给我们生成一个全局作用域 window</p>
+</li>
+<li><p>这个作用域会一直存在，直到页面关闭就销毁了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 下面两个变量都是存在在全局作用域下面的，都是可以在任意地方使用的</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">100</span></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">200</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="局部作用域"><a href="#局部作用域" class="headerlink" title="局部作用域"></a>局部作用域</h3><ul>
+<li><p>局部作用域就是在全局作用域下面有开辟出来的一个相对小一些的作用域</p>
+</li>
+<li><p>在局部作用域中定义的变量只能在这个局部作用域内部使用</p>
+</li>
+<li><p><strong>在 JS 中只有函数能生成一个局部作用域，别的都不行</strong></p>
+</li>
+<li><p>每一个函数，都是一个局部作用域</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这个 num 是一个全局作用域下的变量 在任何地方都可以使用</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">100</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 下面这个变量就是一个 fn 局部作用域内部的变量</span></span><br><span class="line">  <span class="comment">// 只能在 fn 函数内部使用</span></span><br><span class="line">  <span class="keyword">var</span> num2 = <span class="number">200</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fn()</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="变量使用规则（重点）"><a href="#变量使用规则（重点）" class="headerlink" title="变量使用规则（重点）"></a>变量使用规则（重点）</h2><ul>
+<li>有了作用域以后，变量就有了使用范围，也就有了使用规则</li>
+<li>变量使用规则分为两种，<strong>访问规则</strong> 和 <strong>赋值规则</strong></li>
+</ul>
+<h3 id="访问规则"><a href="#访问规则" class="headerlink" title="访问规则"></a>访问规则</h3><ul>
+<li><p>当我想获取一个变量的值的时候，我们管这个行为叫做 <strong>访问</strong></p>
+</li>
+<li><p>获取变量的规则： </p>
+<ul>
+<li>首先，在自己的作用域内部查找，如果有，就直接拿来使用</li>
+<li>如果没有，就去上一级作用域查找，如果有，就拿来使用</li>
+<li>如果没有，就继续去上一级作用域查找，依次类推</li>
+<li>如果一直到全局作用域都没有这个变量，那么就会直接报错（该变量 is not defined）</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">100</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> num2 = <span class="number">200</span></span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> num3 = <span class="number">300</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">console</span>.log(num3) <span class="comment">// 自己作用域内有，拿过来用</span></span><br><span class="line">    <span class="built_in">console</span>.log(num2) <span class="comment">// 自己作用域内没有，就去上一级，就是 fn 的作用域里面找，发现有，拿过来用</span></span><br><span class="line">    <span class="built_in">console</span>.log(num) <span class="comment">// 自己这没有，去上一级 fn 那里也没有，再上一级到全局作用域，发现有，直接用</span></span><br><span class="line">    <span class="built_in">console</span>.log(a) <span class="comment">// 自己没有，一级一级找上去到全局都没有，就会报错</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  fun()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fn()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>变量的访问规则 也叫做 作用域的查找机制</p>
+</li>
+<li><p>作用域的查找机制只能是向上找，不能向下找</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> num = <span class="number">100</span></span><br><span class="line">&#125;</span><br><span class="line">fn()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(num) <span class="comment">// 发现自己作用域没有，自己就是全局作用域，没有再上一级了，直接报错</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h3 id="赋值规则"><a href="#赋值规则" class="headerlink" title="赋值规则"></a>赋值规则</h3><ul>
+<li><p>当你想给一个变量赋值的时候，那么就先要找到这个变量，在给他赋值</p>
+</li>
+<li><p>变量赋值规则：</p>
+<ul>
+<li>先在自己作用域内部查找，有就直接赋值</li>
+<li>没有就去上一级作用域内部查找，有就直接赋值</li>
+<li>在没有再去上一级作用域查找，有就直接赋值</li>
+<li>如果一直找到全局作用域都没有，那么就把这个变量定义为全局变量，在给他赋值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  num = <span class="number">100</span></span><br><span class="line">&#125;</span><br><span class="line">fn()</span><br><span class="line"></span><br><span class="line"><span class="comment">// fn 调用以后，要给 num 赋值</span></span><br><span class="line"><span class="comment">// 查看自己的作用域内部没有 num 变量</span></span><br><span class="line"><span class="comment">// 就会向上一级查找</span></span><br><span class="line"><span class="comment">// 上一级就是全局作用域，发现依旧没有</span></span><br><span class="line"><span class="comment">// 那么就会把 num 定义为全局的变量，并为其赋值</span></span><br><span class="line"><span class="comment">// 所以 fn() 以后，全局就有了一个变量叫做 num 并且值是 100</span></span><br><span class="line"><span class="built_in">console</span>.log(num) <span class="comment">// 100</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><ul>
+<li><p>什么是递归函数</p>
+</li>
+<li><p>在编程世界里面，递归就是一个自己调用自己的手段</p>
+</li>
+<li><p>递归函数： 一个函数内部，调用了自己，循环往复</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 下面这个代码就是一个最简单的递归函数</span></span><br><span class="line"><span class="comment">// 在函数内部调用了自己，函数一执行，就调用自己一次，在调用再执行，循环往复，没有止尽</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  fn()</span><br><span class="line">&#125;</span><br><span class="line">fn()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其实递归函数和循环很类似</p>
+</li>
+<li><p>需要有初始化，自增，执行代码，条件判断的，不然就是一个没有尽头的递归函数，我们叫做 <strong>死递归</strong></p>
+</li>
+</ul>
+<h2 id="简单实现一个递归"><a href="#简单实现一个递归" class="headerlink" title="简单实现一个递归"></a>简单实现一个递归</h2><ul>
+<li><p>我们先在用递归函数简单实现一个效果</p>
+</li>
+<li><p>需求： 求 1 至 5 的和</p>
+<ul>
+<li>先算 1 + 2 得 3</li>
+<li>再算 3 + 3 得 6</li>
+<li>再算 6 + 4 得 10 </li>
+<li>再算 10 + 5 得 15</li>
+<li>结束</li>
+</ul>
+</li>
+<li><p>开始书写，写递归函数先要写结束条件（为了避免出现 “死递归”）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 传递进来的是 1</span></span><br><span class="line">  <span class="comment">// 当 n === 5 的时候要结束</span></span><br><span class="line">  <span class="keyword">if</span> (n === <span class="number">5</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">5</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>再写不满足条件的时候我们的递归处理</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 传递进来的是 1</span></span><br><span class="line">  <span class="comment">// 当 n === 5 的时候要结束</span></span><br><span class="line">  <span class="keyword">if</span> (n === <span class="number">5</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">5</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// 不满足条件的时候，就是当前数字 + 比自己大 1 的数字</span></span><br><span class="line">    <span class="keyword">return</span> n + add(n + <span class="number">1</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">add(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="简单了解对象"><a href="#简单了解对象" class="headerlink" title="简单了解对象"></a>简单了解对象</h2><ul>
+<li><p>对象是一个复杂数据类型</p>
+</li>
+<li><p>其实说是复杂，但是没有很复杂，只不过是存储了一些基本数据类型的一个集合</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  num: <span class="number">100</span>,</span><br><span class="line">  str: <span class="string">'hello world'</span>,</span><br><span class="line">  boo: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这里的 <code>{}</code> 和函数中的 <code>{}</code> 不一样</p>
+</li>
+<li><p>函数里面的是写代码的，而对象里面是写一些数据的</p>
+</li>
+<li><p><strong>对象就是一个键值对的集合</strong></p>
+</li>
+<li><p><code>{}</code> 里面的每一个键都是一个成员</p>
+</li>
+<li><p>也就是说，我们可以把一些数据放在一个对象里面，那么他们就互不干扰了</p>
+</li>
+<li><p>其实就是我们准备一个房子，把我们想要的数据放进去，然后把房子的地址给到变量名，当我们需要某一个数据的时候，就可以根据变量名里面存储的地址找到对应的房子，然后去房子里面找到对应的数据</p>
+</li>
+</ul>
+<h3 id="创建一个对象"><a href="#创建一个对象" class="headerlink" title="创建一个对象"></a>创建一个对象</h3><ul>
+<li><p>字面量的方式创建一个对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个空对象</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 像对象中添加成员</span></span><br><span class="line">obj.name = <span class="string">'Jack'</span></span><br><span class="line">obj.age = <span class="number">18</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内置构造函数的方式创建对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个空对象</span></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向对象中添加成员</span></span><br><span class="line">obj.name = <span class="string">'Rose'</span></span><br><span class="line">obj.age = <span class="number">20</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Object 是 js 内置给我们的构造函数，用于创建一个对象使用的</li>
+</ul>
+</li>
+</ul>
+</article>
+                        </main>
+                        
+                        
+                    </div>
+                </div>
+                <div class="row mt-5 mb-5">
+                    <div class="col-12">
+                        <div class="row">
+    <div class="col">
+        <nav aria-label="paginator" class="paginator">
+            <ul class="pagination d-none d-md-flex pagination-lg justify-content-center">
+                <li class="page-item ">
+                    <a class="page-link"
+                        href="/2019/09/21/DAY03_循环结构/"
+                        aria-label="Previous">
+                        <span aria-hidden="true">&laquo;
+                            循环解构</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item ">
+                    <a class="page-link"
+                        href="/2019/09/21/DAY01_JavaScript基础语法/"
+                        aria-label="Next">
+                        <span
+                            aria-hidden="true">JavaScript基础语法
+                            &raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="pagination d-md-none justify-content-center">
+                <li class="page-item ">
+                    <a class="page-link"
+                        href="/2019/09/21/DAY03_循环结构/"
+                        aria-label="Previous">
+                        <span aria-hidden="true">&laquo;
+                            循环解构</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item ">
+                    <a class="page-link"
+                        href="/2019/09/21/DAY01_JavaScript基础语法/"
+                        aria-label="Next">
+                        <span
+                            aria-hidden="true">JavaScript基础语法
+                            &raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div id="vcomment"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="container pt-4 page-sidebar">
+                    
+                    <div class="row">
+    <div class="col">
+        <h6>APPLAUSE FOR ME</h6>
+        <div id="applause-easy"></div>
+    </div>
+</div>
+                    
+                    <hr class="row">
+                    <div class="row toc-container">
+                        <div class="col-12">
+                            <h6>NAVIGATION</h6>
+                            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#函数（下）"><span class="toc-text">函数（下）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#作用域（重点）"><span class="toc-text">作用域（重点）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#全局作用域"><span class="toc-text">全局作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#局部作用域"><span class="toc-text">局部作用域</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量使用规则（重点）"><span class="toc-text">变量使用规则（重点）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#访问规则"><span class="toc-text">访问规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#赋值规则"><span class="toc-text">赋值规则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#递归函数"><span class="toc-text">递归函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单实现一个递归"><span class="toc-text">简单实现一个递归</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单了解对象"><span class="toc-text">简单了解对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建一个对象"><span class="toc-text">创建一个对象</span></a></li></ol></li></ol></li></ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="jumbotron jumbotron-fluid mb-0">
+        <div class="container-fluid">
+            <div class="col text-center">
+                <div class="bottom-social">
+                    <div class="row">
+    <div class="col text-center">
+        <ul class="list-inline">
+            
+            <li class="list-inline-item">
+                
+                <a href="https://github.com/zsh155165">
+                    <span class="fa-stack fa-2x icon-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                
+            </li>
+            
+            <li class="list-inline-item">
+                
+                <a href="https://www.facebook.com/xxxxx">
+                    <span class="fa-stack fa-2x icon-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                
+            </li>
+            
+            <li class="list-inline-item">
+                
+                <a href="https://www.pinterest.com/https://daohx.cn">
+                    <span class="fa-stack fa-2x icon-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-pinterest-p fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                
+            </li>
+            
+            <li class="list-inline-item">
+                
+                <a href="https://www.linkedin.com/in/xxxxx">
+                    <span class="fa-stack fa-2x icon-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+                </div>
+                <p class="copyright text-muted">
+                    Copyright &copy; Hexo
+                    <br>
+                    Thanks for coming!
+                    <br>
+                    <a href="https://github.com/Hanlin-Dong/hexo-theme-adagio">Adagio</a> - A <a href="https://hexo.io">Hexo</a> theme made with love by
+                    <a href="http://www.hanlindong.com">Hanlin Dong</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>
+        <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.bootcss.com/font-awesome/5.9.0/js/all.min.js"></script>
+         
+            <script type="text/x-mathjax-config">
+                MathJax.Hub.Config({
+                    CommonHTML: { linebreaks: { automatic: true } },
+                    "HTML-CSS": { linebreaks: { automatic: true } },
+                    SVG: { linebreaks: { automatic: true } }
+                });
+            </script>
+            <script src='https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+        
+    
+
+
+<script src="/js/av.min.js"></script>
+<script src="/js/valine.min.js"></script>
+<script src="/js/applause-easy.js"></script>
+
+<script>
+$(document).ready(function() {
+    var a = new ApplauseEasy({
+        id: 'applause-easy',
+        appId: "xxxxxxxxxx",
+        appKey: "xxxxxxxxxx",
+        img_src: "http://img.hanlindong.com/blog/site/clap.png",
+        img_width: "50px",
+        img_height: "50px"
+    })
+})
+</script>
+
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?123456789";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11111111-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-11111111-1');
+</script>
+
+
+    
+    <script>
+    new Valine({
+        el: "#vcomment",
+        appId: "xxxxxxxxxx",
+        appKey: "xxxxxxxxxx",
+        notify: false,
+        varify: false,
+        avatar: 'identicon',
+        placeholder: "",
+        recordIP: true
+    })
+</script>
+    
+</body>
+</html>
