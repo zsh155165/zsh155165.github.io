@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content>
+    <link rel="shortcut icon" href="http://some.url/to/favicon.ico">
+    <title>Math 和 Date-稻花香的小窝</title>
+    
+        
+            <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://cdn.bootcss.com/academicons/1.8.6/css/academicons.min.css" rel="stylesheet">
+            <link href="https://cdn.bootcss.com/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+            <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+        
+    
+    <link rel="stylesheet" href="/css/adagio.css">
+</head>
+<body>
+    <div class="container-fluid">
+    <nav class="nav">
+        <div class="collapse navbar-collapse" id="navbar-sm">
+            
+            
+            <div class="navbar-nav">
+                <a href="daohx.cn" class="nav-item nav-link">稻花香</a>
+            </div>
+            
+            <div class="navbar-nav">
+                <a href="http://yyadc.cn" class="nav-item nav-link">友链</a>
+            </div>
+            
+        </div>
+    </nav>
+</div>
+
+<div class="d-flex d-md-none" style="width: 100%; background-color: #e9ecef">
+    
+    <div class="nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-sm"
+            aria-expanded="false" aria-label="Toggle Navigation">
+            <i class="fas fa-bars fa-lg"></i>
+        </button>
+    </div>
+    
+    <nav class="navbar ml-auto">
+        <a class="navbar-brand" href="/">
+            
+            <img class="logo" src="/./images/log.jpg" />
+            
+        </a>
+    </nav>
+</div>
+
+
+<div class="container d-none d-md-block my-navbar">
+    <nav class="navbar navbar-expand-sm navbar-light bg-transparent">
+        <a class="navbar-brand " href="/">
+            
+            <img class="logo" src="/./images/log.jpg" />
+            
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                
+                <li class="nav-item pl-2 pr-2 ">
+                    <a class="nav-link" href="/daohx.cn">稻花香</a>
+                </li>
+                
+                <li class="nav-item pl-2 pr-2 ">
+                    <a class="nav-link" href="http://yyadc.cn">友链</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </nav>
+</div>
+
+
+
+
+    <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        
+        <h1 class="mt-4 article-title page-title">Math 和 Date</h1>
+        
+        <p class="lead text-gray mt-3">By Anonymous; Published on 2019-09-21</p>
+        
+        <div class="tags">
+            <ul class="tag-list">
+                
+            </ul>
+        </div>
+        
+    </div>
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 pt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <main>
+                            <article class="article-text page-content"><h1 id="Math-和-Date"><a href="#Math-和-Date" class="headerlink" title="Math 和 Date"></a>Math 和 Date</h1><ul>
+<li>Math 是 js 的一个内置对象，提供了一堆的方法帮助我们操作 <strong>数字</strong></li>
+<li>Date 是 js 的一个内置对象，提供了一堆的方法帮助我们操作 <strong>时间</strong></li>
+</ul>
+<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ul>
+<li>没有什么多余的东西，就是一堆的方法来操作数字</li>
+</ul>
+<h3 id="random"><a href="#random" class="headerlink" title="random"></a>random</h3><ul>
+<li><p><code>Math.random()</code> 这个方法是用来生成一个 <code>0 ~ 1</code> 之间的随机数</p>
+</li>
+<li><p>每次执行生成的数字都不一样，但是一定是 <code>0 ~ 1</code> 之间的</p>
+</li>
+<li><p>生成的数字包含 0 ，但是不包含 1</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="built_in">Math</span>.random()</span><br><span class="line"><span class="built_in">console</span>.log(num) <span class="comment">// 得到一个随机数</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="round"><a href="#round" class="headerlink" title="round"></a>round</h3><ul>
+<li><p><code>Math.round()</code> 是将一个小数 <strong>四舍五入</strong> 变成一个整数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10.1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(num)) <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">10.6</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(num2)) <span class="comment">// 11</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h3 id="abs"><a href="#abs" class="headerlink" title="abs"></a>abs</h3><ul>
+<li><p><code>Math.abs()</code> 是返回一个数字的绝对值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">-10</span></span><br><span class="line"><span class="built_in">console</span>.log(math.abs(num)) <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="ceil"><a href="#ceil" class="headerlink" title="ceil"></a>ceil</h3><ul>
+<li><p><code>Math.ceil()</code> 是将一个小数 <strong>向上取整</strong> 得到的整数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10.1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.ceil(num)) <span class="comment">// 11</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">10.9</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.ceil(num2)) <span class="comment">// 11</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h3 id="floor"><a href="#floor" class="headerlink" title="floor"></a>floor</h3><ul>
+<li><p><code>Math.floor()</code> 是将一个小数 <strong>向下取整</strong> 的到的整数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10.1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.floor(num)) <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">10.9</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.floor(num2)) <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h3 id="max"><a href="#max" class="headerlink" title="max"></a>max</h3><ul>
+<li><p><code>Math.max()</code> 得到的是你传入的几个数字之中最大的那个数字</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.max(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)) <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="min"><a href="#min" class="headerlink" title="min"></a>min</h3><ul>
+<li><p><code>Math.min()</code> 得到的是你传入的几个数字之中最小的那个数字</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.min(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="PI"><a href="#PI" class="headerlink" title="PI"></a>PI</h3><ul>
+<li><p><code>Math.PI</code> 得到的是 <code>π</code> 的值，也就是 <code>3.1415936...</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.PI) <span class="comment">// 3.141592653589793</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>因为计算机的计算精度问题，只能得到小数点后 15 位</li>
+<li><strong>使用 Math.PI 的时候，是不需要加 () 的</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="数字转换进制"><a href="#数字转换进制" class="headerlink" title="数字转换进制"></a>数字转换进制</h2><ol>
+<li><p><code>toString()</code> 方法可以在数字转成字符串的时候给出一个进制数</p>
+<ul>
+<li><p>语法： <code>toString(你要转换的进制)</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">100</span></span><br><span class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">2</span>)) <span class="comment">// 1100100</span></span><br><span class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">8</span>)) <span class="comment">// 144</span></span><br><span class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">16</span>)) <span class="comment">// 64</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>parseInt()</code> 方法可以在字符串转成数字的时候把字符串当成多少进制转成十进制</p>
+<ul>
+<li><p>语法： <code>parseInt(要转换的字符串，当作几进制来转换)</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="number">100</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(str, <span class="number">8</span>)) <span class="comment">// 64 把 100 当作一个 八进制 的数字转换成 十进制 以后得到的</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(str, <span class="number">16</span>)) <span class="comment">// 256 把 100 当作 十六进制 的数字转换成 十进制 以后得到的</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(str, <span class="number">2</span>)) <span class="comment">// 4 把 100 当作 二进制 的数字转换成 十进制 以后得到的</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h2><ul>
+<li>js 提供的内置构造函数，专门用来获取时间的</li>
+</ul>
+<h3 id="new-Date"><a href="#new-Date" class="headerlink" title="new Date()"></a>new Date()</h3><ul>
+<li><p><code>new Date()</code> 在不传递参数的情况下是默认返回当前时间</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line"><span class="built_in">console</span>.log(time) <span class="comment">// 当前时间 Fri Mar 01 2019 13:11:23 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>new Date()</code> 在传入参数的时候，可以获取到一个你传递进去的时间</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-03-03 13:11:11'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(time) <span class="comment">// Sun Mar 03 2019 13:11:11 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>new Date()</code> 传递的参数有多种情况</p>
+<ol>
+<li><p>传递两个数字，第一个表示年，第二个表示月份</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">00</span>) <span class="comment">// 月份从 0 开始计数，0 表示 1月，11 表示 12月</span></span><br><span class="line"><span class="built_in">console</span>.log(time) <span class="comment">// Tue Jan 01 2019 00:00:00 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>传递三个数字，前两个不变，第三个表示该月份的第几天，从 1 到 31</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">00</span>, <span class="number">05</span>) </span><br><span class="line"><span class="built_in">console</span>.log(time) <span class="comment">// Sat Jan 05 2019 00:00:00 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>传递四个数字，前三个不变，第四个表示当天的几点，从 0 到 23</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">00</span>, <span class="number">05</span>, <span class="number">22</span>) </span><br><span class="line"><span class="built_in">console</span>.log(time) <span class="comment">// Sat Jan 05 2019 22:00:00 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>传递五个数字，前四个不变，第五个表示的是该小时的多少分钟，从 0 到 59</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">00</span>, <span class="number">05</span>, <span class="number">22</span>, <span class="number">33</span>) </span><br><span class="line"><span class="built_in">console</span>.log(time) <span class="comment">// Sat Jan 05 2019 22:33:00 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>传递六个数字，前五个不变，第六个表示该分钟的多少秒，从 0 到 59</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">00</span>, <span class="number">05</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">55</span>) </span><br><span class="line"><span class="built_in">console</span>.log(time) <span class="comment">// Sat Jan 05 2019 22:33:55 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>传入字符串的形式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019'</span>)) </span><br><span class="line"><span class="comment">// Tue Jan 01 2019 08:00:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-02'</span>)) </span><br><span class="line"><span class="comment">// Fri Feb 01 2019 08:00:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-02-03'</span>)) </span><br><span class="line"><span class="comment">// Sun Feb 03 2019 08:00:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-02-03 13:'</span>)) </span><br><span class="line"><span class="comment">// Sun Feb 03 2019 13:00:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-02-03 13:13:'</span>)) </span><br><span class="line"><span class="comment">// Sun Feb 03 2019 13:13:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-02-03 13:13:13'</span>)) </span><br><span class="line"><span class="comment">// Sun Feb 03 2019 13:13:13 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="将日期字符串格式化成指定内容"><a href="#将日期字符串格式化成指定内容" class="headerlink" title="将日期字符串格式化成指定内容"></a>将日期字符串格式化成指定内容</h2><ul>
+<li>比如我们得到的时间字符串是 <code>Sun Feb 03 2019 13:13:13 GMT+0800 (中国标准时间)</code></li>
+<li>我指向得到这个日期中是那一年，我们就要靠截取字符串的形式得到</li>
+<li>但是现在 js 为我们提供了一系列的方法来得到里面的指定内容</li>
+</ul>
+<h3 id="getFullYear"><a href="#getFullYear" class="headerlink" title="getFullYear"></a>getFullYear</h3><ul>
+<li><p><code>getFullYear()</code> 方式是得到指定字符串中的哪一年</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="built_in">console</span>.log(time.getFullYear()) <span class="comment">// 2019</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="getMonth"><a href="#getMonth" class="headerlink" title="getMonth"></a>getMonth</h3><ul>
+<li><p><code>getMonth()</code> 方法是得到指定字符串中的哪一个月份 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="built_in">console</span>.log(time.getMonth()) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<ul>
+<li>这里要有一个注意的地方</li>
+<li>月份是从 0 开始数的</li>
+<li>0 表示 1月，1 表示 2月，依此类推</li>
+</ul>
+<h3 id="getDate"><a href="#getDate" class="headerlink" title="getDate"></a>getDate</h3><ul>
+<li><p><code>getDate()</code> 方法是得到指定字符串中的哪一天</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="built_in">console</span>.log(time.getDate()) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="getHours"><a href="#getHours" class="headerlink" title="getHours"></a>getHours</h3><ul>
+<li><p><code>getHours()</code> 方法是得到指定字符串中的哪小时</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="built_in">console</span>.log(time.getHours()) <span class="comment">// 8</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="getMinutes"><a href="#getMinutes" class="headerlink" title="getMinutes"></a>getMinutes</h3><ul>
+<li><p><code>getMinutes()</code> 方法是得到指定字符串中的哪分钟</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="built_in">console</span>.log(time.getMinutes()) <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="getSeconds"><a href="#getSeconds" class="headerlink" title="getSeconds"></a>getSeconds</h3><ul>
+<li><p><code>getSeconds()</code> 方法是得到指定字符串中的哪秒钟</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="built_in">console</span>.log(time.getSeconds()) <span class="comment">// 22</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h3 id="getDay"><a href="#getDay" class="headerlink" title="getDay"></a>getDay</h3><ul>
+<li><p><code>getDay()</code> 方法是得到指定字符串当前日期是一周中的第几天（周日是 0，周六是 6）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="built_in">console</span>.log(time.getDay()) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="getTime"><a href="#getTime" class="headerlink" title="getTime"></a>getTime</h3><ul>
+<li><p><code>getTime()</code> 方法是得到执行时间到 <code>格林威治时间</code> 的毫秒数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="built_in">console</span>.log(time.getTime()) <span class="comment">// 1554681622000</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="获取时间差"><a href="#获取时间差" class="headerlink" title="获取时间差"></a>获取时间差</h2><ul>
+<li>是指获取两个时间点之间相差的时间</li>
+<li>在 js 中是不能用时间直接做 减法 的</li>
+<li>我们需要一些特殊的操作</li>
+<li>在编程的世界里面，有一个特殊的时间，是 <code>1970年01月01日00时00分00秒</code></li>
+<li>这个时间我们叫做 <code>格林威治时间</code></li>
+<li>所有的编程世界里面，这个时间都是一样的，而且 <code>格林威治时间</code> 的数字是 0</li>
+<li>从 <code>格林威治时间</code> 开始，每经过1毫秒，数字就会 + 1</li>
+<li>所以我们可以获取到任意一个时间节点到 <code>格林威治时间</code> 的毫秒数</li>
+<li>然后在用两个毫秒数相减，就能得到两个时间点之间相差的毫秒数</li>
+<li>我们在通过这个毫秒数得到准确的时间</li>
+</ul>
+<h3 id="计算时间差"><a href="#计算时间差" class="headerlink" title="计算时间差"></a>计算时间差</h3><ul>
+<li>例如：我们现在计算一下 <code>2019-01-01 00:00:00</code> 到 <code>2019-01-03 04:55:34</code> 的时间差</li>
+</ul>
+<ol>
+<li><p>先获取两个时间点到 <code>格林威治时间</code> 的毫秒数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-01-01 00:00:00'</span>)</span><br><span class="line"><span class="keyword">var</span> time2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-01-03 04:55:34'</span>)</span><br><span class="line"></span><br><span class="line">time1 = time1.getTime()</span><br><span class="line">time2 = time2.getTime()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(time1) <span class="comment">// 1546272000000</span></span><br><span class="line"><span class="built_in">console</span>.log(time2) <span class="comment">// 1546462534000</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>两个时间相减，得到两个时间点之间相差的毫秒数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> differenceTime = time2 - time1</span><br><span class="line"><span class="built_in">console</span>.log(differenceTime) <span class="comment">// 190534000</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>现在我们计算出了两个时间点之间相差的毫秒数</li>
+</ul>
+</li>
+<li><p>把我们计算的毫秒数换算成时间</p>
+<ul>
+<li><p>先计算出有多少天</p>
+</li>
+<li><p>以为一天是 <code>1000 * 60 * 60 * 24</code> 毫秒</p>
+</li>
+<li><p>用总的毫秒数除以一天的毫秒数，就能得到多少天了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-01-01 00:00:00'</span>)</span><br><span class="line"><span class="keyword">var</span> time2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-01-03 04:55:34'</span>)</span><br><span class="line">time1 = time1.getTime()</span><br><span class="line">time2 = time2.getTime()</span><br><span class="line"><span class="keyword">var</span> differenceTime = time2 - time1</span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整的天数</span></span><br><span class="line"><span class="keyword">var</span> day = differenceTime / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>) <span class="comment">// 2.20525462962963</span></span><br><span class="line">day = <span class="built_in">Math</span>.ceil(day) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>因为得到的是有小数的天数，我们向下取整，得到有多少个整的天数</li>
+</ul>
+</li>
+<li><p>使用 <code>differenceTime</code> 减去两天所包含的毫秒数，剩下的就是不够一天的毫秒数</p>
+</li>
+<li><p>用不够一天的毫秒数计算出有多少个小时</p>
+</li>
+<li><p>因为一个小时是 <code>1000 * 60 * 60</code> 毫秒</p>
+</li>
+<li><p>用不够一天的毫秒数除以一小时的毫秒数，就能得到多少小时了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-01-01 00:00:00'</span>)</span><br><span class="line"><span class="keyword">var</span> time2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-01-03 04:55:34'</span>)</span><br><span class="line">time1 = time1.getTime()</span><br><span class="line">time2 = time2.getTime()</span><br><span class="line"><span class="keyword">var</span> differenceTime = time2 - time1</span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整的天数</span></span><br><span class="line"><span class="keyword">var</span> day = differenceTime / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>) <span class="comment">// 2.20525462962963</span></span><br><span class="line">day = <span class="built_in">Math</span>.floor(day) <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整的小时数</span></span><br><span class="line"><span class="keyword">var</span> afterHours = differenceTime - (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span> * <span class="number">2</span>)</span><br><span class="line"><span class="keyword">var</span> hours = afterHours / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span>)</span><br><span class="line">hours = <span class="built_in">Math</span>.floor(hours) <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>和刚才一样的道理，我们需要向下取整</li>
+</ul>
+</li>
+<li><p>同理，使用 <code>afterHours</code> - 4个小时包含的毫秒数，剩下的就是不够一个小时的毫秒数</p>
+</li>
+<li><p>用不够一个小时的毫秒数计算出有多少分钟</p>
+</li>
+<li><p>因为一分钟是 <code>1000 * 60</code> 毫秒</p>
+</li>
+<li><p>用不够一个小时的毫秒数除以一分钟的毫秒数就能得到多少分钟了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-01-01 00:00:00'</span>)</span><br><span class="line"><span class="keyword">var</span> time2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-01-03 04:55:34'</span>)</span><br><span class="line">time1 = time1.getTime()</span><br><span class="line">time2 = time2.getTime()</span><br><span class="line"><span class="keyword">var</span> differenceTime = time2 - time1</span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整的天数</span></span><br><span class="line"><span class="keyword">var</span> day = differenceTime / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>) <span class="comment">// 2.20525462962963</span></span><br><span class="line">day = <span class="built_in">Math</span>.floor(day) <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整的小时数</span></span><br><span class="line"><span class="keyword">var</span> afterHours = differenceTime - (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span> * <span class="number">2</span>)</span><br><span class="line"><span class="keyword">var</span> hours = afterHours / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span>)</span><br><span class="line">hours = <span class="built_in">Math</span>.floor(hours) <span class="comment">// 4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整分钟数</span></span><br><span class="line"><span class="keyword">var</span> afterMinutes = afterHours - (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">4</span>)</span><br><span class="line"><span class="keyword">var</span> minutes = afterMinutes / (<span class="number">1000</span> * <span class="number">60</span>)</span><br><span class="line">minutes = <span class="built_in">Math</span>.floor(minutes) <span class="comment">// 55</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>和之前一样的道理计算出秒</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-01-01 00:00:00'</span>)</span><br><span class="line"><span class="keyword">var</span> time2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-01-03 04:55:34'</span>)</span><br><span class="line">time1 = time1.getTime()</span><br><span class="line">time2 = time2.getTime()</span><br><span class="line"><span class="keyword">var</span> differenceTime = time2 - time1</span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整的天数</span></span><br><span class="line"><span class="keyword">var</span> day = differenceTime / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>) <span class="comment">// 2.20525462962963</span></span><br><span class="line">day = <span class="built_in">Math</span>.floor(day) <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整的小时数</span></span><br><span class="line"><span class="keyword">var</span> afterHours = differenceTime - (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span> * <span class="number">2</span>)</span><br><span class="line"><span class="keyword">var</span> hours = afterHours / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span>)</span><br><span class="line">hours = <span class="built_in">Math</span>.floor(hours) <span class="comment">// 4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整分钟数</span></span><br><span class="line"><span class="keyword">var</span> afterMinutes = afterHours - (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">4</span>)</span><br><span class="line"><span class="keyword">var</span> minutes = afterMinutes / (<span class="number">1000</span> * <span class="number">60</span>)</span><br><span class="line">minutes = <span class="built_in">Math</span>.floor(minutes) <span class="comment">// 55</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整秒数</span></span><br><span class="line"><span class="keyword">var</span> afterSeconds = afterMinutes - (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">55</span>)</span><br><span class="line"><span class="keyword">var</span> seconds = afterSeconds / <span class="number">1000</span></span><br><span class="line">seconds = <span class="built_in">Math</span>.floor(seconds) <span class="comment">// 34</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最后，同理减去整秒的数，剩下的就是毫秒数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-01-01 00:00:00'</span>)</span><br><span class="line"><span class="keyword">var</span> time2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-01-03 04:55:34'</span>)</span><br><span class="line">time1 = time1.getTime()</span><br><span class="line">time2 = time2.getTime()</span><br><span class="line"><span class="keyword">var</span> differenceTime = time2 - time1</span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整的天数</span></span><br><span class="line"><span class="keyword">var</span> day = differenceTime / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>) <span class="comment">// 2.20525462962963</span></span><br><span class="line">day = <span class="built_in">Math</span>.floor(day) <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整的小时数</span></span><br><span class="line"><span class="keyword">var</span> afterHours = differenceTime - (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span> * <span class="number">2</span>)</span><br><span class="line"><span class="keyword">var</span> hours = afterHours / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span>)</span><br><span class="line">hours = <span class="built_in">Math</span>.floor(hours) <span class="comment">// 4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整分钟数</span></span><br><span class="line"><span class="keyword">var</span> afterMinutes = afterHours - (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">4</span>)</span><br><span class="line"><span class="keyword">var</span> minutes = afterMinutes / (<span class="number">1000</span> * <span class="number">60</span>)</span><br><span class="line">minutes = <span class="built_in">Math</span>.floor(minutes) <span class="comment">// 55</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算整秒数</span></span><br><span class="line"><span class="keyword">var</span> afterSeconds = afterMinutes - (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">55</span>)</span><br><span class="line"><span class="keyword">var</span> seconds = afterSeconds / <span class="number">1000</span></span><br><span class="line">seconds = <span class="built_in">Math</span>.floor(seconds) <span class="comment">// 34</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算毫秒数</span></span><br><span class="line"><span class="keyword">var</span> milliSeconds = afterSeconds - (<span class="number">1000</span> * <span class="number">34</span>) <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最后我们把结果输出一下就可以了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.write(<span class="string">'2019-01-01 00:00:00 和 2019-01-03 04:55:34 之间相差'</span>)</span><br><span class="line"><span class="built_in">document</span>.write(day + <span class="string">'天'</span> + hours + <span class="string">'小时'</span> + minutes + <span class="string">'分钟'</span> + seconds + <span class="string">'秒'</span> + milliSeconds + <span class="string">'毫秒'</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ol>
+</article>
+                        </main>
+                        
+                        
+                    </div>
+                </div>
+                <div class="row mt-5 mb-5">
+                    <div class="col-12">
+                        <div class="row">
+    <div class="col">
+        <nav aria-label="paginator" class="paginator">
+            <ul class="pagination d-none d-md-flex pagination-lg justify-content-center">
+                <li class="page-item ">
+                    <a class="page-link"
+                        href="/2019/09/21/DAY01_字符串的操作/"
+                        aria-label="Previous">
+                        <span aria-hidden="true">&laquo;
+                            字符串的操作</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item ">
+                    <a class="page-link"
+                        href="/2019/09/21/DAY04_函数（上）/"
+                        aria-label="Next">
+                        <span
+                            aria-hidden="true">函数（上）
+                            &raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="pagination d-md-none justify-content-center">
+                <li class="page-item ">
+                    <a class="page-link"
+                        href="/2019/09/21/DAY01_字符串的操作/"
+                        aria-label="Previous">
+                        <span aria-hidden="true">&laquo;
+                            字符串的操作</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item ">
+                    <a class="page-link"
+                        href="/2019/09/21/DAY04_函数（上）/"
+                        aria-label="Next">
+                        <span
+                            aria-hidden="true">函数（上）
+                            &raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div id="vcomment"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="container pt-4 page-sidebar">
+                    
+                    <div class="row">
+    <div class="col">
+        <h6>APPLAUSE FOR ME</h6>
+        <div id="applause-easy"></div>
+    </div>
+</div>
+                    
+                    <hr class="row">
+                    <div class="row toc-container">
+                        <div class="col-12">
+                            <h6>NAVIGATION</h6>
+                            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Math-和-Date"><span class="toc-text">Math 和 Date</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Math"><span class="toc-text">Math</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#random"><span class="toc-text">random</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#round"><span class="toc-text">round</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#abs"><span class="toc-text">abs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ceil"><span class="toc-text">ceil</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#floor"><span class="toc-text">floor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#max"><span class="toc-text">max</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#min"><span class="toc-text">min</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PI"><span class="toc-text">PI</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数字转换进制"><span class="toc-text">数字转换进制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Date"><span class="toc-text">Date</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#new-Date"><span class="toc-text">new Date()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将日期字符串格式化成指定内容"><span class="toc-text">将日期字符串格式化成指定内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#getFullYear"><span class="toc-text">getFullYear</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getMonth"><span class="toc-text">getMonth</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getDate"><span class="toc-text">getDate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getHours"><span class="toc-text">getHours</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getMinutes"><span class="toc-text">getMinutes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getSeconds"><span class="toc-text">getSeconds</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getDay"><span class="toc-text">getDay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getTime"><span class="toc-text">getTime</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取时间差"><span class="toc-text">获取时间差</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#计算时间差"><span class="toc-text">计算时间差</span></a></li></ol></li></ol></li></ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="jumbotron jumbotron-fluid mb-0">
+        <div class="container-fluid">
+            <div class="col text-center">
+                <div class="bottom-social">
+                    <div class="row">
+    <div class="col text-center">
+        <ul class="list-inline">
+            
+            <li class="list-inline-item">
+                
+                <a href="https://github.com/zsh155165">
+                    <span class="fa-stack fa-2x icon-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                
+            </li>
+            
+            <li class="list-inline-item">
+                
+                <a href="https://www.facebook.com/xxxxx">
+                    <span class="fa-stack fa-2x icon-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                
+            </li>
+            
+            <li class="list-inline-item">
+                
+                <a href="https://www.pinterest.com/https://daohx.cn">
+                    <span class="fa-stack fa-2x icon-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-pinterest-p fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                
+            </li>
+            
+            <li class="list-inline-item">
+                
+                <a href="https://www.linkedin.com/in/xxxxx">
+                    <span class="fa-stack fa-2x icon-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+                </div>
+                <p class="copyright text-muted">
+                    Copyright &copy; Hexo
+                    <br>
+                    Thanks for coming!
+                    <br>
+                    <a href="https://github.com/Hanlin-Dong/hexo-theme-adagio">Adagio</a> - A <a href="https://hexo.io">Hexo</a> theme made with love by
+                    <a href="http://www.hanlindong.com">Hanlin Dong</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>
+        <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.bootcss.com/font-awesome/5.9.0/js/all.min.js"></script>
+         
+            <script type="text/x-mathjax-config">
+                MathJax.Hub.Config({
+                    CommonHTML: { linebreaks: { automatic: true } },
+                    "HTML-CSS": { linebreaks: { automatic: true } },
+                    SVG: { linebreaks: { automatic: true } }
+                });
+            </script>
+            <script src='https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+        
+    
+
+
+<script src="/js/av.min.js"></script>
+<script src="/js/valine.min.js"></script>
+<script src="/js/applause-easy.js"></script>
+
+<script>
+$(document).ready(function() {
+    var a = new ApplauseEasy({
+        id: 'applause-easy',
+        appId: "YHmXO1I7PLr0YFKIXtAIKmNQ-gzGzoHsz",
+        appKey: "ABHl1YOrHzBqN18OV85MtliH",
+        img_src: "http://img.hanlindong.com/blog/site/clap.png",
+        img_width: "50px",
+        img_height: "50px"
+    })
+})
+</script>
+
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?123456789";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11111111-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-11111111-1');
+</script>
+
+
+    
+    <script>
+    new Valine({
+        el: "#vcomment",
+        appId: "",
+        appKey: "",
+        notify: false,
+        varify: false,
+        avatar: 'identicon',
+        placeholder: "",
+        recordIP: true
+    })
+</script>
+    
+</body>
+</html>
